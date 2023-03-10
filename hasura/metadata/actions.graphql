@@ -1,0 +1,24 @@
+type Query {
+  findusers(
+    radius: Int!
+    userId: Int!
+  ): [NearestUser!]!
+}
+
+enum NearestUserGender {
+  MALE
+  FEMALE
+}
+
+type NearestUser {
+  firstName: String!
+  lastName: String!
+  gender: NearestUserGender
+  location: NearestUserLocation
+}
+
+type NearestUserLocation {
+  lat: Float!
+  lng: Float!
+}
+

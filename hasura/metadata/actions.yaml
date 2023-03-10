@@ -1,0 +1,21 @@
+actions:
+  - name: findusers
+    definition:
+      kind: ""
+      handler: http://handlers:4444/findusers
+    comment: Get nearest users
+custom_types:
+  enums:
+    - name: NearestUserGender
+      values:
+        - description: null
+          is_deprecated: null
+          value: MALE
+        - description: null
+          is_deprecated: null
+          value: FEMALE
+  input_objects: []
+  objects:
+    - name: NearestUser
+    - name: NearestUserLocation
+  scalars: []
